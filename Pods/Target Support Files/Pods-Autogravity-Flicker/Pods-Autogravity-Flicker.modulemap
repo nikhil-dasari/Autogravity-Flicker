@@ -1,0 +1,6 @@
+framework module Pods_Autogravity_Flicker {
+  umbrella header "Pods-Autogravity-Flicker-umbrella.h"
+
+  export *
+  module * { export * }
+}
