@@ -13,6 +13,8 @@
 		A3224D8E21F57B80004C7186 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3224D8D21F57B80004C7186 /* Assets.xcassets */; };
 		A3224D9121F57B80004C7186 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3224D8F21F57B80004C7186 /* LaunchScreen.storyboard */; };
 		A3224D9E21F57FD7004C7186 /* DetailImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3224D9D21F57FD7004C7186 /* DetailImageViewController.swift */; };
+		A324B5AD220CA72E001F0258 /* Autogravity_FlickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324B5AC220CA72E001F0258 /* Autogravity_FlickerTests.swift */; };
+		A324B5BB220CA745001F0258 /* Autogravity_FlickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324B5BA220CA745001F0258 /* Autogravity_FlickerUITests.swift */; };
 		A37DE40321F59A8700DBE53F /* RecentImagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37DE40221F59A8700DBE53F /* RecentImagesViewModel.swift */; };
 		A39E282121F67A060088484F /* RecentImagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39E282021F67A060088484F /* RecentImagesTableViewCell.swift */; };
 		A39E282521F6E9B90088484F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39E282421F6E9B90088484F /* Photo.swift */; };
@@ -20,6 +22,23 @@
 		A39E283121F877590088484F /* DetailImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39E283021F877590088484F /* DetailImageViewModel.swift */; };
 		A39E283421F969180088484F /* RecentImagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39E283321F969180088484F /* RecentImagesService.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A324B5AF220CA72E001F0258 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3224D7B21F57B7E004C7186 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A3224D8221F57B7F004C7186;
+			remoteInfo = "Autogravity-Flicker";
+		};
+		A324B5BD220CA745001F0258 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3224D7B21F57B7E004C7186 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A3224D8221F57B7F004C7186;
+			remoteInfo = "Autogravity-Flicker";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3773BB2C693CF448EB1071AA /* Pods_Autogravity_Flicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Autogravity_Flicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,6 +49,12 @@
 		A3224D9021F57B80004C7186 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3224D9221F57B80004C7186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3224D9D21F57FD7004C7186 /* DetailImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImageViewController.swift; sourceTree = "<group>"; };
+		A324B5AA220CA72D001F0258 /* Autogravity-FlickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Autogravity-FlickerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A324B5AC220CA72E001F0258 /* Autogravity_FlickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autogravity_FlickerTests.swift; sourceTree = "<group>"; };
+		A324B5AE220CA72E001F0258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A324B5B8220CA745001F0258 /* Autogravity-FlickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Autogravity-FlickerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A324B5BA220CA745001F0258 /* Autogravity_FlickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autogravity_FlickerUITests.swift; sourceTree = "<group>"; };
+		A324B5BC220CA745001F0258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A37DE40221F59A8700DBE53F /* RecentImagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentImagesViewModel.swift; sourceTree = "<group>"; };
 		A39E282021F67A060088484F /* RecentImagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentImagesTableViewCell.swift; sourceTree = "<group>"; };
 		A39E282421F6E9B90088484F /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
@@ -49,6 +74,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A324B5A7220CA72D001F0258 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A324B5B5220CA745001F0258 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -64,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				A3224D8521F57B7F004C7186 /* Autogravity-Flicker */,
+				A324B5AB220CA72E001F0258 /* Autogravity-FlickerTests */,
+				A324B5B9220CA745001F0258 /* Autogravity-FlickerUITests */,
 				A3224D8421F57B7F004C7186 /* Products */,
 				F14259AFE4A6BF706BB9695E /* Pods */,
 				00DABFF5D21D5212C7939B7B /* Frameworks */,
@@ -74,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				A3224D8321F57B7F004C7186 /* Autogravity-Flicker.app */,
+				A324B5AA220CA72D001F0258 /* Autogravity-FlickerTests.xctest */,
+				A324B5B8220CA745001F0258 /* Autogravity-FlickerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,6 +180,24 @@
 			path = "Detail Image";
 			sourceTree = "<group>";
 		};
+		A324B5AB220CA72E001F0258 /* Autogravity-FlickerTests */ = {
+			isa = PBXGroup;
+			children = (
+				A324B5AC220CA72E001F0258 /* Autogravity_FlickerTests.swift */,
+				A324B5AE220CA72E001F0258 /* Info.plist */,
+			);
+			path = "Autogravity-FlickerTests";
+			sourceTree = "<group>";
+		};
+		A324B5B9220CA745001F0258 /* Autogravity-FlickerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A324B5BA220CA745001F0258 /* Autogravity_FlickerUITests.swift */,
+				A324B5BC220CA745001F0258 /* Info.plist */,
+			);
+			path = "Autogravity-FlickerUITests";
+			sourceTree = "<group>";
+		};
 		A39E283221F968CB0088484F /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +237,42 @@
 			productReference = A3224D8321F57B7F004C7186 /* Autogravity-Flicker.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A324B5A9220CA72D001F0258 /* Autogravity-FlickerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A324B5B1220CA72E001F0258 /* Build configuration list for PBXNativeTarget "Autogravity-FlickerTests" */;
+			buildPhases = (
+				A324B5A6220CA72D001F0258 /* Sources */,
+				A324B5A7220CA72D001F0258 /* Frameworks */,
+				A324B5A8220CA72D001F0258 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A324B5B0220CA72E001F0258 /* PBXTargetDependency */,
+			);
+			name = "Autogravity-FlickerTests";
+			productName = "Autogravity-FlickerTests";
+			productReference = A324B5AA220CA72D001F0258 /* Autogravity-FlickerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A324B5B7220CA745001F0258 /* Autogravity-FlickerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A324B5BF220CA745001F0258 /* Build configuration list for PBXNativeTarget "Autogravity-FlickerUITests" */;
+			buildPhases = (
+				A324B5B4220CA745001F0258 /* Sources */,
+				A324B5B5220CA745001F0258 /* Frameworks */,
+				A324B5B6220CA745001F0258 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A324B5BE220CA745001F0258 /* PBXTargetDependency */,
+			);
+			name = "Autogravity-FlickerUITests";
+			productName = "Autogravity-FlickerUITests";
+			productReference = A324B5B8220CA745001F0258 /* Autogravity-FlickerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -188,6 +285,14 @@
 				TargetAttributes = {
 					A3224D8221F57B7F004C7186 = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					A324B5A9220CA72D001F0258 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = A3224D8221F57B7F004C7186;
+					};
+					A324B5B7220CA745001F0258 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = A3224D8221F57B7F004C7186;
 					};
 				};
 			};
@@ -205,6 +310,8 @@
 			projectRoot = "";
 			targets = (
 				A3224D8221F57B7F004C7186 /* Autogravity-Flicker */,
+				A324B5A9220CA72D001F0258 /* Autogravity-FlickerTests */,
+				A324B5B7220CA745001F0258 /* Autogravity-FlickerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -217,6 +324,20 @@
 				A3224D9121F57B80004C7186 /* LaunchScreen.storyboard in Resources */,
 				A3224D8E21F57B80004C7186 /* Assets.xcassets in Resources */,
 				A3224D8C21F57B7F004C7186 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A324B5A8220CA72D001F0258 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A324B5B6220CA745001F0258 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +410,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A324B5A6220CA72D001F0258 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A324B5AD220CA72E001F0258 /* Autogravity_FlickerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A324B5B4220CA745001F0258 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A324B5BB220CA745001F0258 /* Autogravity_FlickerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A324B5B0220CA72E001F0258 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A3224D8221F57B7F004C7186 /* Autogravity-Flicker */;
+			targetProxy = A324B5AF220CA72E001F0258 /* PBXContainerItemProxy */;
+		};
+		A324B5BE220CA745001F0258 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A3224D8221F57B7F004C7186 /* Autogravity-Flicker */;
+			targetProxy = A324B5BD220CA745001F0258 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A3224D8A21F57B7F004C7186 /* Main.storyboard */ = {
@@ -465,6 +615,84 @@
 			};
 			name = Release;
 		};
+		A324B5B2220CA72E001F0258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M6YSXY4CKD;
+				INFOPLIST_FILE = "Autogravity-FlickerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.takehome.Autogravity-FlickerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Autogravity-Flicker.app/Autogravity-Flicker";
+			};
+			name = Debug;
+		};
+		A324B5B3220CA72E001F0258 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M6YSXY4CKD;
+				INFOPLIST_FILE = "Autogravity-FlickerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.takehome.Autogravity-FlickerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Autogravity-Flicker.app/Autogravity-Flicker";
+			};
+			name = Release;
+		};
+		A324B5C0220CA745001F0258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M6YSXY4CKD;
+				INFOPLIST_FILE = "Autogravity-FlickerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.takehome.Autogravity-FlickerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Autogravity-Flicker";
+			};
+			name = Debug;
+		};
+		A324B5C1220CA745001F0258 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M6YSXY4CKD;
+				INFOPLIST_FILE = "Autogravity-FlickerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.takehome.Autogravity-FlickerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Autogravity-Flicker";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -482,6 +710,24 @@
 			buildConfigurations = (
 				A3224D9621F57B80004C7186 /* Debug */,
 				A3224D9721F57B80004C7186 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A324B5B1220CA72E001F0258 /* Build configuration list for PBXNativeTarget "Autogravity-FlickerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A324B5B2220CA72E001F0258 /* Debug */,
+				A324B5B3220CA72E001F0258 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A324B5BF220CA745001F0258 /* Build configuration list for PBXNativeTarget "Autogravity-FlickerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A324B5C0220CA745001F0258 /* Debug */,
+				A324B5C1220CA745001F0258 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
