@@ -16,15 +16,6 @@ class Photo {
     let farm: Int
     let serverId: String
     let secret: String
-
-    
-//    init(id: String, title: String, farm: Int, serverId: String, secret: String, url: URL) {
-//        self.id = id
-//        self.title = title
-//        self.farm = farm
-//        self.serverId = serverId
-//        self.secret = secret
-//    }
     
     init?(json: JSON) {
         guard let id = json["id"].rawValue as? String,

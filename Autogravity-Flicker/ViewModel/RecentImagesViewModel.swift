@@ -12,6 +12,7 @@ import AlamofireImage
 protocol RecentImagesViewModelDelegate: class {
     func reloadViewController()
     func viewModel(_ viewModel: RecentImagesViewModel, didGetImage image: Image, for indexPath: IndexPath)
+    func viewModel(_ viewModel: RecentImagesViewModel, didGetDetailImage: Image, for indexPath: IndexPath)
 }
 
 class RecentImagesViewModel {
@@ -58,6 +59,44 @@ extension RecentImagesViewModel {
         return recentImagesData[indexPath.row].configureImageUrl()
     }
     
+    func scaledImage(forRowAt indexPath: IndexPath) -> Image? {
+        guard let imageUrlAtIndexPath = recentImagesData[indexPath.row].configureImageUrl() else { return nil }
+        
+        if let cachedImage = cachedImage(for: imageUrlAtIndexPath) {
+            let scaledImage = scaleImage(cachedImage)
+            return scaledImage
+        }else {
+            var imageAtIndexPath: Image?
+            recentImagesService.retrieveImage(for: imageUrlAtIndexPath, at: indexPath) { image in
+                imageAtIndexPath = image
+                let scaledImage = self.scaleImage(image)
+                self.cacheImage(image, for: imageUrlAtIndexPath)
+                print("seting image with downloaded image")
+                self.delegate?.viewModel(self, didGetImage: scaledImage, for: indexPath)
+            }
+            if let _ = imageAtIndexPath {
+                print("Image is available")
+            }else {
+                print("returning nil image")
+            }
+            return imageAtIndexPath
+        }
+        
+    }
+    
+    func detailImage(forRowAt indexPath: IndexPath) {
+        guard let imageUrlAtIndexPath = recentImagesData[indexPath.row].configureImageUrl() else { return }
+        
+        if let cachedImage = cachedImage(for: imageUrlAtIndexPath) {
+            self.delegate?.viewModel(self, didGetDetailImage: cachedImage, for: indexPath)
+        }else {
+            recentImagesService.retrieveImage(for: imageUrlAtIndexPath, at: indexPath) { image in
+                self.cacheImage(image, for: imageUrlAtIndexPath)
+                self.delegate?.viewModel(self, didGetDetailImage: image, for: indexPath)
+            }
+        }
+    }
+    
 }
 
 
@@ -67,12 +106,20 @@ extension RecentImagesViewModel {
 
     func cacheImage(_ image: Image, for url: URL) {
         let urlString = url.absoluteString
+        print("caching the image")
         imageCache.add(image, withIdentifier: urlString)
     }
     
     func cachedImage(for url: URL) -> Image? {
         let urlString = url.absoluteString
-        return imageCache.image(withIdentifier: urlString)
+        if let cachedImage = imageCache.image(withIdentifier: urlString) {
+            print("returning cached image")
+            return cachedImage
+        }else {
+            print("Can not find the cached image for url")
+            return nil
+        }
+       
     }
     
 }

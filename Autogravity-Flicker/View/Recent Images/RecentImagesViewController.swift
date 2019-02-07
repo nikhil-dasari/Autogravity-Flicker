@@ -56,11 +56,10 @@ extension RecentImagesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: RecentImagesTableViewCell.cellId, for: indexPath) as! RecentImagesTableViewCell
-        cell.configure(delegate: self, name: self.recentImagesViewModel.title(forRowAt: indexPath))
-        if let url = recentImagesViewModel.imageUrl(at: indexPath) {
-             cell.recentImageButton.af_setImage(for: .normal, url: url)
-        }
-       
+        cell.configure(delegate: self, name: self.recentImagesViewModel.title(forRowAt: indexPath), indexPath: indexPath)
+        
+        let image = recentImagesViewModel.scaledImage(forRowAt: indexPath)
+        cell.recentImageButton.setImage(image, for: .normal)
         return cell
     }
     
@@ -69,6 +68,10 @@ extension RecentImagesViewController: UITableViewDataSource {
 // MARK: - Navigation
 
 extension RecentImagesViewController: RecentImagesTableViewCellDelegate {
+    func recentImagesTableViewCell(_cell: RecentImagesTableViewCell, tappedImageAt indexPath: IndexPath) {
+        recentImagesViewModel.detailImage(forRowAt: indexPath)
+    }
+    
     func recentImagesTableViewCell(_ cell: RecentImagesTableViewCell, imageDidTapped image: UIImage, name: String) {
         let detailImageViewModel = DetailImageViewModel(image: image, name: name)
         let detailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: DetailImageViewController.storyboardId) as! DetailImageViewController
@@ -90,6 +93,15 @@ extension RecentImagesViewController: RecentImagesViewModelDelegate {
     func viewModel(_ viewModel: RecentImagesViewModel, didGetImage image: UIImage, for indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) as? RecentImagesTableViewCell else { return }
         cell.recentImageButton?.setImage(image, for: .normal)
+    }
+    
+    func viewModel(_ viewModel: RecentImagesViewModel, didGetDetailImage image: UIImage, for indexPath: IndexPath) {
+        let name = self.recentImagesViewModel.title(forRowAt: indexPath)
+        let detailImageViewModel = DetailImageViewModel(image: image, name: name)
+        let detailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: DetailImageViewController.storyboardId) as! DetailImageViewController
+        detailVC.viewModel = detailImageViewModel
+        recentImagesViewModel.tappedImageNameLabel = name
+        self.navigationController?.pushViewController(detailVC, animated: true)
     }
     
 }

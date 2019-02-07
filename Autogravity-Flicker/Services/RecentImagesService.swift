@@ -13,6 +13,8 @@ import AlamofireImage
 
 class RecentImagesService {
     
+    fileprivate var dataRequests: [IndexPath: DataRequest] = [:]
+    
     fileprivate var flickerRecentImagesUrl: URL? {
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
@@ -58,19 +60,32 @@ class RecentImagesService {
         Alamofire.request(url).validate().responseJSON { response in
             guard let responseData = JSON(response.value as Any)["photos"]["photo"].array else { return }
             let photos = self.parseResponseJson(responseData)
-            completionHandler(photos)
+            DispatchQueue.main.async {
+                 completionHandler(photos)
+            }
+           
         }
     }
     
-    func retrieveImage(for url: URL, completionHandler: @escaping (Image) -> ()) {
-        Alamofire.request(url).validate().responseImage { response in
+    func retrieveImage(for url: URL, at indexPath: IndexPath, completionHandler: @escaping (Image) -> ()) {
+        
+        if let dataRequest = dataRequests[indexPath] {
+            print("cancelled")
+            dataRequest.cancel()
+        }
+        
+        let request = Alamofire.request(url).validate().responseImage { response in
             switch response.result {
             case .failure(let error):
                 print("Failed to retreive image, error description: \(error.localizedDescription)")
             case .success(let image):
-                completionHandler(image)
+                DispatchQueue.main.async {
+                    completionHandler(image)
+                }
             }
         }
+        
+        dataRequests[indexPath] = request
     }
     
 }
